@@ -103,3 +103,8 @@ def calculate_atom_distance(file_name):
     atom_distance.append(np.sqrt(np.sum(np.array(bond_vector[1])**2)))
     return atom_distance
 ###
+def main():
+    print(calculate_bond_vector(r'./database/example1.xsd', r'\S*_b', r'\S*_e1'))
+###
+if __name__ == "__main__":
+    main()
