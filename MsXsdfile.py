@@ -10,19 +10,50 @@ except ImportError:
     import xml.etree.ElementTree as ET
 import numpy as np
 ### dict {atom_name : atom_ID}
-def get_atoms_information(xsdfile_name, information):
+def get_information(xsdfile_name, source, information1, information2):
     xsdtree = ET.parse(xsdfile_name)
     atoms_information = {}
-    for atom in xsdtree.iter(r'Atom3d'):
-        if atom.attrib.get(r'Name') and atom.attrib.get(information):
-            atoms_information[atom.attrib[r'Name']] = atom.attrib[information]
+    for atom in xsdtree.iter(source):
+        if atom.attrib.get(information1) and atom.attrib.get(information2):
+            atoms_information[atom.attrib[information1]] = atom.attrib[information2]
     return atoms_information
 ###
-def get_atoms_ID(xsdfile_name):
-    return get_atoms_information(xsdfile_name, r'ID')
+def get_atoms_Name_ID(xsdfile_name):
+    return get_information(xsdfile_name, r'Atom3d', r'Name', r'ID')
 ###
-def get_atoms_connections(xsdfile_name):
-    return get_atoms_information(xsdfile_name, r'Connections')
+###
+def get_atoms_ID_Name(xsdfile_name):
+    return get_information(xsdfile_name, r'Atom3d', r'ID', r'Name')
+###
+def get_atoms_Name_connections(xsdfile_name):
+    return get_information(xsdfile_name, r'Atom3d', r'Name', r'Connections')
+###
+def get_atoms_ID_connections(xsdfile_name):
+    return get_information(xsdfile_name, r'Atom3d', r'ID', r'Connections')
+###
+def get_bond_ID_connects(xsdfile_name):
+    return get_information(xsdfile_name, r'Bond', r'ID', r'Connects')
+###
+### {atom_ID : atom_IDs}
+def get_atomsID_neighboursID(xsdfile_name):
+    #atoms_Name_connections = get_atoms_Name_connections(xsdfile_name)
+    #atoms_Name_ID = get_atoms_Name_ID(xsdfile_name)
+    atoms_ID_connections = get_atoms_ID_connections(xsdfile_name)
+    bond_ID_connects = get_bond_ID_connects(xsdfile_name)
+    ###
+    atoms_neighbours = {}
+    ###
+    for atom_ID, atom_connections in atoms_ID_connections.items():
+        atom_connects = set('')
+        for bond_ID, bond_connects in bond_ID_connects.items():
+            if bond_ID in atom_connections.split(r','):
+                atom_connects.update(bond_connects.split(r','))
+        atom_connects = atom_connects - set([atom_ID])
+        atoms_neighbours[atom_ID] = list(atom_connects)
+    return atoms_neighbours
+    
+    
+    
 ### list [ AVector, BVector, CVecotr ]
 def get_lattice_constant(xsdfile_name):
     xsdtree = ET.parse(xsdfile_name)
@@ -34,7 +65,7 @@ def get_lattice_constant(xsdfile_name):
     return lattice_constant
 ###
 ### dict {atom_name : atom_frac_coordinate}
-def get_atoms_frac_coordinate(xsdfile_name):
+def get_atoms_Name_frac_coordinate(xsdfile_name):
     xsdtree = ET.parse(xsdfile_name)
     atoms_frac_coordinate = {}
     for atom in xsdtree.iter(r'Atom3d'):
@@ -66,9 +97,10 @@ def frac2desc(frac_coordinate, lattice_constant):
 ###
 def main():
     xsdfile_name = r'GeO2+H_suf110_2x1x4_2fix.xsd' 
-    print(get_atoms_ID(xsdfile_name))
-    print(get_atoms_connections(xsdfile_name))
-
+    #print(get_atoms_ID(xsdfile_name))
+    #print(type(get_atoms_connections(xsdfile_name)[r'Ge13']))
+    #print(get_bond(xsdfile_name))
+    print(get_atoms_ID_neighbours(xsdfile_name))
 ###
 if __name__ == "__main__":
     main()

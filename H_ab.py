@@ -17,7 +17,7 @@ O_eq_name = 'O\d{0,3}_eq'
 M_eqab_name = '\w_eqab'
 ######
 def H_ab(xsdfile_name, distance = 1.0):
-    atoms_frac_coordinate = MsXsdfile.get_atoms_frac_coordinate(xsdfile_name)
+    atoms_frac_coordinate = MsXsdfile.get_atoms_Name_frac_coordinate(xsdfile_name)
     lattice_constant = MsXsdfile.get_lattice_constant(xsdfile_name)
     ###
     distance_transform = 1.0
@@ -67,7 +67,7 @@ def H_ab(xsdfile_name, distance = 1.0):
     
 
 def main():
-    xsdfile_name = r'rTiO2+H_suf110_d3_2x1x4_2fix.xsd'
+    xsdfile_name = r'GeO2+H_suf110_2x1x4_2fix.xsd'
     #print(atoms_position(r'./GeO2+H_suf110_2x1x4_2fix.xsd'))
     H_ab(xsdfile_name, 1.0)
     #print(lattice_constant(r'./GeO2+H_suf110_2x1x4_2fix.xsd'))
