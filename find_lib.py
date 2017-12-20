@@ -32,14 +32,18 @@ def find_line(file_name,re_formula):
     '''
     ###
 ###
-def find_atom_position(file_name):
+def find_atom_position(file_name, atom_name_pattern_str = r'\S*'):
+    ###
     atom_position = []
+    ###
     try:
         match_lines = find_line(file_name, r'Atom3d')
     except Exception as e:
         print(e)
-    atom_name_pattern = re.compile(r'(Name="\S*")')
-    atom_xyz_pattern = re.compile(r'(XYZ="\S*")')
+    ###
+    atom_name_pattern = re.compile(r'Name="' + atom_name_pattern_str + r'"')
+    atom_xyz_pattern = re.compile(r'XYZ="' + atom_name_pattern_str + r'"')
+    ###
     for i in match_lines:
         match_atom_name = atom_name_pattern.search(i)
         match_atom_xyz = atom_xyz_pattern.search(i)

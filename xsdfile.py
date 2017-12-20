@@ -22,9 +22,9 @@ class Xsdfile(object):
         atoms = {}
         xsdtree = ET.parse(xsdfile_name)
         for atom in xsdtree.iter(r'Atom3d'):
-            atoms[atom.attrib[r'Name']] = atom.attrib[r'XYZ']
+            atoms[atom.attrib[r'Name']] = [ float(i) for i in \
+                 atom.attrib[r'XYZ'].split(r',') ]
         self.atoms = atoms
-        ###
         cell = []
         for lattice in xsdtree.iter(r'SpaceGroup'):
             cell.append([ float(i) for i in lattice.attrib[r'AVector'].split(r',') ])
@@ -33,8 +33,9 @@ class Xsdfile(object):
         self.cell = cell
 def main():
     xsdfile = Xsdfile(r'./database/example1.xsd')
+    for i in xsdfile.atoms.keys():
+        print(i)
     print(xsdfile.atoms)
-    print(xsdfile.file)
     print(xsdfile.cell)
 if __name__ == "__main__":
     main()

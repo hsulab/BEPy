@@ -9,15 +9,20 @@ try:
 except ImportError: 
     import xml.etree.ElementTree as ET
 import numpy as np
-### dict {atom_name : atom_frac_coordinate}
-def get_atoms_frac_coordinate(xsdfile_name):
+### dict {atom_name : atom_ID}
+def get_atoms_information(xsdfile_name, information):
     xsdtree = ET.parse(xsdfile_name)
-    atoms_frac_coordinate = {}
+    atoms_information = {}
     for atom in xsdtree.iter(r'Atom3d'):
-        if atom.attrib.get(r'XYZ') and atom.attrib.get(r'Name'):
-            atoms_frac_coordinate[atom.attrib[r'Name']] = [ float(i) for i in \
-                 atom.attrib[r'XYZ'].split(r',') ]
-    return atoms_frac_coordinate
+        if atom.attrib.get(r'Name') and atom.attrib.get(information):
+            atoms_information[atom.attrib[r'Name']] = atom.attrib[information]
+    return atoms_information
+###
+def get_atoms_ID(xsdfile_name):
+    return get_atoms_information(xsdfile_name, r'ID')
+###
+def get_atoms_connections(xsdfile_name):
+    return get_atoms_information(xsdfile_name, r'Connections')
 ### list [ AVector, BVector, CVecotr ]
 def get_lattice_constant(xsdfile_name):
     xsdtree = ET.parse(xsdfile_name)
@@ -27,6 +32,17 @@ def get_lattice_constant(xsdfile_name):
             lattice_constant.append([ float(i) for i in lattice.attrib[r'BVector'].split(r',') ])
             lattice_constant.append([ float(i) for i in lattice.attrib[r'CVector'].split(r',') ])
     return lattice_constant
+###
+### dict {atom_name : atom_frac_coordinate}
+def get_atoms_frac_coordinate(xsdfile_name):
+    xsdtree = ET.parse(xsdfile_name)
+    atoms_frac_coordinate = {}
+    for atom in xsdtree.iter(r'Atom3d'):
+        if atom.attrib.get(r'XYZ') and atom.attrib.get(r'Name'):
+            atoms_frac_coordinate[atom.attrib[r'Name']] = [ float(i) for i in \
+                 atom.attrib[r'XYZ'].split(r',') ]
+    return atoms_frac_coordinate
+###
 ###
 def calculate_atoms_desc_coordinate(xsdfile_name):
     atoms_desc_coordinate = {}
@@ -49,7 +65,9 @@ def frac2desc(frac_coordinate, lattice_constant):
     return np.array(desc_coordinate)
 ###
 def main():
-    print('haha')
+    xsdfile_name = r'GeO2+H_suf110_2x1x4_2fix.xsd' 
+    print(get_atoms_ID(xsdfile_name))
+    print(get_atoms_connections(xsdfile_name))
 
 ###
 if __name__ == "__main__":
