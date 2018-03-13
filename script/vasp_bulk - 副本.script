@@ -1,0 +1,83 @@
+#!/bin/bash
+#PBS -N bulk
+#PBS -r n 
+#PBS -j oe 
+#PBS -l walltime=72:00:00
+#PBS -l nodes=2:ppn=6
+#PBS -q bigmem
+
+# go to work dir
+cd $PBS_O_WORKDIR
+# The program we want to execute (modify to suit your setup)
+EXEC=/data/apps/vasp/5.3.5/vasp-TS
+
+# setup mpd env (Of course use some other secret word than "dfadfs")
+if [ ! -f ~/.mpd.conf ]; then
+/bin/echo "secretword=dfadfs" >> ~/.mpd.conf
+/bin/chmod 600 ~/.mpd.conf
+fi
+
+##########################################################
+# The following should be no need to
+#       change any of these settings for normal use.
+##########################################################
+
+# setup Nums of Processor
+NP=`cat $PBS_NODEFILE|wc -l`
+echo "Numbers of Processors:  $NP"
+echo "---------------------------"
+echo `date`
+cat $PBS_NODEFILE | uniq
+
+# setup mpi env (em64t)
+export OMP_NUM_THREADS=1
+#export P4_GLOBMEMSIZE=1073741824
+export I_MPI_PIN_DOMAIN=auto
+export MPD_CON_EXT=$PBS_JOBID
+
+v=$(echo "scale=7;114.634/ 14.61^3 "| bc) 
+cat >> comment << !
+2 (1= energy in Ry, 2= energy in eV, 3= energy in hartree)
+$v (= CONVERSION FACTOR FROM A**3 TO THE VOLUME OF UNIT CELL [0.25, 0.5, 1.0])
+4.9 6.7 2 (= amin amax # mesh points, it's just written out, not useful)
+11 (= number of data points)
+!
+for i in 2.41 2.45 2.49 2.53 2.57 2.61 2.65 2.69 2.73 2.77 2.81 
+do
+a=$(echo "scale=15;$i/2.60673646539116* -1.505 "| bc)
+b=$(echo "scale=15;$i/2.60673646539116*3.01 "| bc) 
+c=$(echo "scale=15;$i/2.60673646539116*14.61 "| bc)
+cat > POSCAR << !
+   hcp MoC
+   1.00000000000000
+       $i       $a       0.000000000000000
+       0.000000000000000      $b        0.000000000000000
+       0.000000000000000      0.000000000000000       $c
+       C    Mo
+       6    6
+Direct
+  0.3333333333333330   0.6666666666666671   0.6670000000000020
+ -0.3333333333333330  -0.6666666666666671   1.1670000000000020
+  0.6666666666666670   0.3333333333333330  -0.6670000000000020
+ -0.6666666666666670  -0.3333333333333330  -0.1670000000000020
+  0.0000000000000000   0.0000000000000000   0.0000000000000000
+  0.0000000000000000   0.0000000000000000   0.5000000000000001  
+  0.0000000000000000   0.0000000000000000   0.2500000000000001
+  0.0000000000000000   0.0000000000000000   0.7500000000000001
+  0.3333333333333330   0.6666666666666671   0.0830000000000005
+ -0.3333333333333330  -0.6666666666666671   0.5830000000000006
+  0.6666666666666670   0.3333333333333330  -0.0830000000000005
+ -0.6666666666666670  -0.3333333333333330   0.4169999999999995
+
+
+!
+# running program
+mpirun -r ssh -genv I_MPI_FABRICS shm:dapl -n $NP $EXEC 2>&1 > print-out
+E=$(grep F OSZICAR | tail -1 | awk '{print $5}')
+echo $c $E >> comment
+done
+/data/apps/vasp/murn-am < comment > lattice
+# clean
+
+echo `date` >> $HOME/finish
+echo `pwd` >>  $HOME/finish

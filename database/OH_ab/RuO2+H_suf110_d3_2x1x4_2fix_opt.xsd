@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="latin1"?>
+<!DOCTYPE XSD []>
+<XSD Version="8.0" WrittenBy="Materials Studio 8.0">
+	<AtomisticTreeRoot ID="1" NumProperties="61" NumChildren="1">
+		<Property Name="AngleAxisType" DefinedOn="AngleBetweenPlanesBender" Type="Enumerated"/>
+		<Property Name="AngleEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="BeadDocumentID" DefinedOn="MesoMoleculeSet" Type="String"/>
+		<Property Name="BendBendEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="BendTorsionBendEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="BondEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="EFGAsymmetry" DefinedOn="Atom" Type="Double"/>
+		<Property Name="EFGQuadrupolarCoupling" DefinedOn="Atom" Type="Double"/>
+		<Property Name="ElectrostaticEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="FaceMillerIndex" DefinedOn="GrowthFace" Type="MillerIndex"/>
+		<Property Name="FacetTransparency" DefinedOn="GrowthFace" Type="Float"/>
+		<Property Name="FermiLevel" DefinedOn="ScalarFieldBase" Type="Double"/>
+		<Property Name="Force" DefinedOn="Matter" Type="CoDirection"/>
+		<Property Name="FrameFilter" DefinedOn="Trajectory" Type="String"/>
+		<Property Name="HarmonicForceConstant" DefinedOn="HarmonicRestraint" Type="Double"/>
+		<Property Name="HarmonicMinimum" DefinedOn="HarmonicRestraint" Type="Double"/>
+		<Property Name="HydrogenBondEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ImportOrder" DefinedOn="Bondable" Type="UnsignedInteger"/>
+		<Property Name="InversionEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="IsBackboneAtom" DefinedOn="Atom" Type="Boolean"/>
+		<Property Name="IsChiralCenter" DefinedOn="Atom" Type="Boolean"/>
+		<Property Name="IsOutOfPlane" DefinedOn="Atom" Type="Boolean"/>
+		<Property Name="IsRepeatArrowVisible" DefinedOn="ElectrodeWire" Type="Boolean"/>
+		<Property Name="KineticEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="LineExtentPadding" DefinedOn="BestFitLineMonitor" Type="Double"/>
+		<Property Name="LinkageGroupName" DefinedOn="Linkage" Type="String"/>
+		<Property Name="ListIdentifier" DefinedOn="PropertyList" Type="String"/>
+		<Property Name="NMRShielding" DefinedOn="Atom" Type="Double"/>
+		<Property Name="NonBondEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="NormalMode" DefinedOn="Bondable" Type="Direction"/>
+		<Property Name="NormalModeFrequency" DefinedOn="Bondable" Type="Double"/>
+		<Property Name="NumScanSteps" DefinedOn="LinearScan" Type="UnsignedInteger"/>
+		<Property Name="OrbitalCutoffRadius" DefinedOn="Bondable" Type="Double"/>
+		<Property Name="PlaneExtentPadding" DefinedOn="BestFitPlaneMonitor" Type="Double"/>
+		<Property Name="PotentialEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="QuantizationValue" DefinedOn="ScalarFieldBase" Type="Double"/>
+		<Property Name="RelativeVelocity" DefinedOn="Matter" Type="Direction"/>
+		<Property Name="RepeatArrowScale" DefinedOn="ElectrodeWire" Type="Float"/>
+		<Property Name="RestraintEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ScanEnd" DefinedOn="LinearScan" Type="Double"/>
+		<Property Name="ScanStart" DefinedOn="LinearScan" Type="Double"/>
+		<Property Name="SeparatedStretchStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ServerDipoleMoment" DefinedOn="MatterGroupProperties" Type="Direction"/>
+		<Property Name="SimulationStep" DefinedOn="Trajectory" Type="Integer"/>
+		<Property Name="SpinQuantizationDirection" DefinedOn="Atom" Type="Direction"/>
+		<Property Name="Stiffness" DefinedOn="SymmetryMatterHessian" Type="Matrix6x6"/>
+		<Property Name="StretchBendStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="StretchStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="StretchTorsionStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="Temperature" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ThreeBodyNonBondEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="TorsionBendBendEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="TorsionEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="TorsionStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="TotalEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="Units" DefinedOn="ScalarFieldBase" Type="String"/>
+		<Property Name="ValenceCrossTermEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ValenceDiagonalEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="VanDerWaalsEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="_Stress" DefinedOn="MatterSymmetrySystem" Type="Matrix"/>
+		<Property Name="_TrajectoryStress" DefinedOn="MatterSymmetrySystem" Type="Matrix"/>
+		<SymmetrySystem ID="2" Mapping="3" Children="ci(144):144+4" Normalized="1" Name="HORu" OverspecificationTolerance="0.05" PeriodicDisplayType="Original" HasSymmetryHistory="1">
+			<MappingSet ID="148" SymmetryDefinition="53" ActiveSystem="2" NumFamilies="1" OwnsTotalConstraintMapping="1" TotalConstraintMapping="3">
+				<MappingFamily ID="149" NumImageMappings="29">
+					<IdentityMapping ID="150" Element="1,0,0,0,0,1,0,0,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="ci(142):49+4,93+54" DefectObjects="53,151,147,152" NumImages="142" NumDefects="4">
+						<Atom3d ID="4" Mapping="150" Parent="2" Name="H1_e" DisplayStyle="Ball and Stick" XYZ="0.58893,0.27338,0.59629" Connections="54" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="H"/>
+						<Atom3d ID="5" Mapping="150" Parent="2" Name="O1" DisplayStyle="Ball and Stick" XYZ="0.08911,0.77346,0" Connections="65,153" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="6" Mapping="150" Parent="2" Name="O2" DisplayStyle="Ball and Stick" XYZ="0.58911,0.77346,0" Connections="68,71" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="7" Mapping="150" Parent="2" Name="O3" DisplayStyle="Ball and Stick" XYZ="0.33911,0.07924,0.05612" Connections="55,61,154" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="8" Mapping="150" Parent="2" Name="O4" DisplayStyle="Ball and Stick" XYZ="0.83911,0.07924,0.05612" Connections="155,60,156" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="9" Mapping="150" Parent="2" Name="O5" DisplayStyle="Ball and Stick" XYZ="0.33911,0.46768,0.05612" Connections="57,63,66" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="10" Mapping="150" Parent="2" Name="O6" DisplayStyle="Ball and Stick" XYZ="0.83911,0.46768,0.05612" Connections="157,62,72" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="11" Mapping="150" Parent="2" Name="O7" DisplayStyle="Ball and Stick" XYZ="0.08911,0.77346,0.11223" Connections="67,158,93" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="12" Mapping="150" Parent="2" Name="O8" DisplayStyle="Ball and Stick" XYZ="0.58911,0.77346,0.11223" Connections="69,73,99" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="13" Mapping="150" Parent="2" Name="O9" DisplayStyle="Ball and Stick" XYZ="0.08911,0.27346,0.14446" Connections="59,77,159" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="14" Mapping="150" Parent="2" Name="O10" DisplayStyle="Ball and Stick" XYZ="0.58911,0.27346,0.14446" Connections="64,78,83" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="15" Mapping="150" Parent="2" Name="O11" DisplayStyle="Ball and Stick" XYZ="0.83911,0.57924,0.20058" Connections="85,160,95" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="16" Mapping="150" Parent="2" Name="O12" DisplayStyle="Ball and Stick" XYZ="0.33911,0.57924,0.20058" Connections="79,89,96" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="17" Mapping="150" Parent="2" Name="O13" DisplayStyle="Ball and Stick" XYZ="0.33911,0.96768,0.20058" Connections="161,91,98" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="18" Mapping="150" Parent="2" Name="O14" DisplayStyle="Ball and Stick" XYZ="0.83911,0.96768,0.20058" Connections="162,163,97" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="19" Mapping="150" Parent="2" Name="O15" DisplayStyle="Ball and Stick" XYZ="0.08911,0.27346,0.25669" Connections="81,164,119" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="20" Mapping="150" Parent="2" Name="O16" DisplayStyle="Ball and Stick" XYZ="0.58911,0.27346,0.25669" Connections="82,87,113" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="21" Mapping="150" Parent="2" Name="O17" DisplayStyle="Ball and Stick" XYZ="0.0890400000000002,0.77346,0.28814" Connections="94,101,165" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="22" Mapping="150" Parent="2" Name="O18" DisplayStyle="Ball and Stick" XYZ="0.58904,0.77346,0.28816" Connections="100,103,107" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="23" Mapping="150" Parent="2" Name="O19" DisplayStyle="Ball and Stick" XYZ="0.3391,0.0795400000000002,0.34547" Connections="166,115,120" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="24" Mapping="150" Parent="2" Name="O20" DisplayStyle="Ball and Stick" XYZ="0.83894,0.0795300000000001,0.34547" Connections="167,114,168" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="25" Mapping="150" Parent="2" Name="O21" DisplayStyle="Ball and Stick" XYZ="0.33912,0.46727,0.34546" Connections="102,117,122" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="26" Mapping="150" Parent="2" Name="O22" DisplayStyle="Ball and Stick" XYZ="0.83898,0.46727,0.34546" Connections="108,116,169" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="27" Mapping="150" Parent="2" Name="O23" DisplayStyle="Ball and Stick" XYZ="0.0890400000000002,0.77354,0.39946" Connections="105,170,129" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="28" Mapping="150" Parent="2" Name="O24" DisplayStyle="Ball and Stick" XYZ="0.58903,0.77354,0.39937" Connections="106,111,130" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="29" Mapping="150" Parent="2" Name="O25" DisplayStyle="Ball and Stick" XYZ="0.0890300000000002,0.27349,0.43541" Connections="124,139,171" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="30" Mapping="150" Parent="2" Name="O26" DisplayStyle="Ball and Stick" XYZ="0.58905,0.27355,0.43401" Connections="118,140,145" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="31" Mapping="150" Parent="2" Name="O27" DisplayStyle="Ball and Stick" XYZ="0.33974,0.58254,0.49185" Connections="125,134,137" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="32" Mapping="150" Parent="2" Name="O28" DisplayStyle="Ball and Stick" XYZ="0.83842,0.58255,0.49184" Connections="172,133,143" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="33" Mapping="150" Parent="2" Name="O29" DisplayStyle="Ball and Stick" XYZ="0.33977,0.96462,0.4919" Connections="127,132,173" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="34" Mapping="150" Parent="2" Name="O30" DisplayStyle="Ball and Stick" XYZ="0.83846,0.96463,0.49191" Connections="174,131,175" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="35" Mapping="150" Parent="2" Name="O31" DisplayStyle="Ball and Stick" XYZ="0.0890400000000002,0.27372,0.54236" Connections="135,176" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="36" Mapping="150" Parent="2" Name="O32_b" DisplayStyle="Ball and Stick" XYZ="0.58902,0.2739,0.55224" Connections="54,136,141" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="O"/>
+						<Atom3d ID="37" Mapping="150" Parent="2" Name="Ru1" DisplayStyle="Ball and Stick" XYZ="0.08911,0.27346,0.05612" Connections="55,56,57,58,59" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="38" Mapping="150" Parent="2" Name="Ru2" DisplayStyle="Ball and Stick" XYZ="0.58911,0.27346,0.05612" Connections="60,61,62,63,64" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="39" Mapping="150" Parent="2" Name="Ru3" DisplayStyle="Ball and Stick" XYZ="0.33911,0.77346,0.05612" Connections="65,66,67,68,69,70" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="40" Mapping="150" Parent="2" Name="Ru4" DisplayStyle="Ball and Stick" XYZ="0.83911,0.77346,0.05612" Connections="71,72,73,74,75,76" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="41" Mapping="150" Parent="2" Name="Ru5" DisplayStyle="Ball and Stick" XYZ="0.33911,0.27346,0.20058" Connections="77,78,79,80,81,82" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="42" Mapping="150" Parent="2" Name="Ru6" DisplayStyle="Ball and Stick" XYZ="0.83911,0.27346,0.20058" Connections="83,84,85,86,87,88" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="43" Mapping="150" Parent="2" Name="Ru7" DisplayStyle="Ball and Stick" XYZ="0.08911,0.77346,0.20058" Connections="89,90,91,92,93,94" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="44" Mapping="150" Parent="2" Name="Ru8" DisplayStyle="Ball and Stick" XYZ="0.58911,0.77346,0.20058" Connections="95,96,97,98,99,100" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="45" Mapping="150" Parent="2" Name="Ru9" DisplayStyle="Ball and Stick" XYZ="0.33894,0.77343,0.34405" Connections="101,102,103,104,105,106" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="46" Mapping="150" Parent="2" Name="Ru10" DisplayStyle="Ball and Stick" XYZ="0.83913,0.77342,0.34405" Connections="107,108,109,110,111,112" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="47" Mapping="150" Parent="2" Name="Ru11" DisplayStyle="Ball and Stick" XYZ="0.58903,0.27341,0.34574" Connections="113,114,115,116,117,118" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="48" Mapping="150" Parent="2" Name="Ru12" DisplayStyle="Ball and Stick" XYZ="0.08903,0.2734,0.34575" Connections="119,120,121,122,123,124" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="49" Mapping="150" Parent="2" Name="Ru13" DisplayStyle="Ball and Stick" XYZ="0.08912,0.77357,0.48499" Connections="125,126,127,128,129" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="50" Mapping="150" Parent="2" Name="Ru14" DisplayStyle="Ball and Stick" XYZ="0.58911,0.77358,0.48465" Connections="130,131,132,133,134" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="51" Mapping="150" Parent="2" Name="Ru15" DisplayStyle="Ball and Stick" XYZ="0.33725,0.27359,0.4925" Connections="135,136,137,138,139,140" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Atom3d ID="52" Mapping="150" Parent="2" Name="Ru16" DisplayStyle="Ball and Stick" XYZ="0.84084,0.27359,0.4925" Connections="141,142,143,144,145,146" TemperatureType="Isotropic" AnisotropicTemperature="0,0,0,0,0,0,0,0,0" Components="Ru"/>
+						<Bond ID="54" Mapping="150" Parent="2" Connects="36,4"/>
+						<Bond ID="55" Mapping="150" Parent="2" Connects="37,7"/>
+						<Bond ID="56" Mapping="150" Parent="2" Connects="37,177"/>
+						<Bond ID="57" Mapping="150" Parent="2" Connects="37,9"/>
+						<Bond ID="58" Mapping="150" Parent="2" Connects="37,178"/>
+						<Bond ID="59" Mapping="150" Parent="2" Connects="37,13"/>
+						<Bond ID="60" Mapping="150" Parent="2" Connects="38,8"/>
+						<Bond ID="61" Mapping="150" Parent="2" Connects="38,7"/>
+						<Bond ID="62" Mapping="150" Parent="2" Connects="38,10"/>
+						<Bond ID="63" Mapping="150" Parent="2" Connects="38,9"/>
+						<Bond ID="64" Mapping="150" Parent="2" Connects="38,14"/>
+						<Bond ID="65" Mapping="150" Parent="2" Connects="39,5"/>
+						<Bond ID="66" Mapping="150" Parent="2" Connects="39,9"/>
+						<Bond ID="67" Mapping="150" Parent="2" Connects="39,11"/>
+						<Bond ID="68" Mapping="150" Parent="2" Connects="39,6"/>
+						<Bond ID="69" Mapping="150" Parent="2" Connects="39,12"/>
+						<Bond ID="70" Mapping="150" Parent="2" Connects="39,179"/>
+						<Bond ID="71" Mapping="150" Parent="2" Connects="40,6"/>
+						<Bond ID="72" Mapping="150" Parent="2" Connects="40,10"/>
+						<Bond ID="73" Mapping="150" Parent="2" Connects="40,12"/>
+						<Bond ID="74" Mapping="150" Parent="2" Connects="40,180"/>
+						<Bond ID="75" Mapping="150" Parent="2" Connects="40,181"/>
+						<Bond ID="76" Mapping="150" Parent="2" Connects="40,182"/>
+						<Bond ID="77" Mapping="150" Parent="2" Connects="41,13"/>
+						<Bond ID="78" Mapping="150" Parent="2" Connects="41,14"/>
+						<Bond ID="79" Mapping="150" Parent="2" Connects="41,16"/>
+						<Bond ID="80" Mapping="150" Parent="2" Connects="41,183"/>
+						<Bond ID="81" Mapping="150" Parent="2" Connects="41,19"/>
+						<Bond ID="82" Mapping="150" Parent="2" Connects="41,20"/>
+						<Bond ID="83" Mapping="150" Parent="2" Connects="42,14"/>
+						<Bond ID="84" Mapping="150" Parent="2" Connects="42,184"/>
+						<Bond ID="85" Mapping="150" Parent="2" Connects="42,15"/>
+						<Bond ID="86" Mapping="150" Parent="2" Connects="42,185"/>
+						<Bond ID="87" Mapping="150" Parent="2" Connects="42,20"/>
+						<Bond ID="88" Mapping="150" Parent="2" Connects="42,186"/>
+						<Bond ID="89" Mapping="150" Parent="2" Connects="43,16"/>
+						<Bond ID="90" Mapping="150" Parent="2" Connects="43,187"/>
+						<Bond ID="91" Mapping="150" Parent="2" Connects="43,17"/>
+						<Bond ID="92" Mapping="150" Parent="2" Connects="43,188"/>
+						<Bond ID="93" Mapping="150" Parent="2" Connects="43,11"/>
+						<Bond ID="94" Mapping="150" Parent="2" Connects="43,21"/>
+						<Bond ID="95" Mapping="150" Parent="2" Connects="44,15"/>
+						<Bond ID="96" Mapping="150" Parent="2" Connects="44,16"/>
+						<Bond ID="97" Mapping="150" Parent="2" Connects="44,18"/>
+						<Bond ID="98" Mapping="150" Parent="2" Connects="44,17"/>
+						<Bond ID="99" Mapping="150" Parent="2" Connects="44,12"/>
+						<Bond ID="100" Mapping="150" Parent="2" Connects="44,22"/>
+						<Bond ID="101" Mapping="150" Parent="2" Connects="45,21"/>
+						<Bond ID="102" Mapping="150" Parent="2" Connects="45,25"/>
+						<Bond ID="103" Mapping="150" Parent="2" Connects="45,22"/>
+						<Bond ID="104" Mapping="150" Parent="2" Connects="45,189"/>
+						<Bond ID="105" Mapping="150" Parent="2" Connects="45,27"/>
+						<Bond ID="106" Mapping="150" Parent="2" Connects="45,28"/>
+						<Bond ID="107" Mapping="150" Parent="2" Connects="46,22"/>
+						<Bond ID="108" Mapping="150" Parent="2" Connects="46,26"/>
+						<Bond ID="109" Mapping="150" Parent="2" Connects="46,190"/>
+						<Bond ID="110" Mapping="150" Parent="2" Connects="46,191"/>
+						<Bond ID="111" Mapping="150" Parent="2" Connects="46,28"/>
+						<Bond ID="112" Mapping="150" Parent="2" Connects="46,192"/>
+						<Bond ID="113" Mapping="150" Parent="2" Connects="47,20"/>
+						<Bond ID="114" Mapping="150" Parent="2" Connects="47,24"/>
+						<Bond ID="115" Mapping="150" Parent="2" Connects="47,23"/>
+						<Bond ID="116" Mapping="150" Parent="2" Connects="47,26"/>
+						<Bond ID="117" Mapping="150" Parent="2" Connects="47,25"/>
+						<Bond ID="118" Mapping="150" Parent="2" Connects="47,30"/>
+						<Bond ID="119" Mapping="150" Parent="2" Connects="48,19"/>
+						<Bond ID="120" Mapping="150" Parent="2" Connects="48,23"/>
+						<Bond ID="121" Mapping="150" Parent="2" Connects="48,193"/>
+						<Bond ID="122" Mapping="150" Parent="2" Connects="48,25"/>
+						<Bond ID="123" Mapping="150" Parent="2" Connects="48,194"/>
+						<Bond ID="124" Mapping="150" Parent="2" Connects="48,29"/>
+						<Bond ID="125" Mapping="150" Parent="2" Connects="49,31"/>
+						<Bond ID="126" Mapping="150" Parent="2" Connects="49,195"/>
+						<Bond ID="127" Mapping="150" Parent="2" Connects="49,33"/>
+						<Bond ID="128" Mapping="150" Parent="2" Connects="49,196"/>
+						<Bond ID="129" Mapping="150" Parent="2" Connects="49,27"/>
+						<Bond ID="130" Mapping="150" Parent="2" Connects="50,28"/>
+						<Bond ID="131" Mapping="150" Parent="2" Connects="50,34"/>
+						<Bond ID="132" Mapping="150" Parent="2" Connects="50,33"/>
+						<Bond ID="133" Mapping="150" Parent="2" Connects="50,32"/>
+						<Bond ID="134" Mapping="150" Parent="2" Connects="50,31"/>
+						<Bond ID="135" Mapping="150" Parent="2" Connects="51,35"/>
+						<Bond ID="136" Mapping="150" Parent="2" Connects="51,36"/>
+						<Bond ID="137" Mapping="150" Parent="2" Connects="51,31"/>
+						<Bond ID="138" Mapping="150" Parent="2" Connects="51,197"/>
+						<Bond ID="139" Mapping="150" Parent="2" Connects="51,29"/>
+						<Bond ID="140" Mapping="150" Parent="2" Connects="51,30"/>
+						<Bond ID="141" Mapping="150" Parent="2" Connects="52,36"/>
+						<Bond ID="142" Mapping="150" Parent="2" Connects="52,198"/>
+						<Bond ID="143" Mapping="150" Parent="2" Connects="52,32"/>
+						<Bond ID="144" Mapping="150" Parent="2" Connects="52,199"/>
+						<Bond ID="145" Mapping="150" Parent="2" Connects="52,30"/>
+						<Bond ID="146" Mapping="150" Parent="2" Connects="52,200"/>
+						<SpaceGroup ID="53" Parent="2" Children="151" Name="P1" AVector="6.22358237,0,0" BVector="0,6.35872035,0" CVector="0,0,22.00806186" OrientationBase="C along Z, B in YZ plane" Centering="3D Primitive-Centered" Lattice="3D Triclinic" GroupName="P1" Operators="1,0,0,0,0,1,0,0,0,0,1,0" DisplayRange="0,1,0,1,0,1" LineThickness="2" CylinderRadius="0.2" LabelAxes="1" ActiveSystem="2" ITNumber="1" LongName="P 1" Qualifier="Origin-1" SchoenfliesName="C1-1" System="Triclinic" Class="1"/>
+						<ReciprocalLattice3D ID="151" Parent="53" Visible="0"/>
+						<DistanceStretcher ID="147" Parent="2" Children="152" NumTriggerSets="2">
+							<RestrictableMonitorTriggerSet ID="201" Objects="4,36" ShouldAllowDeletions="0" EventMask="13" IsIndexed="1" Properties="XYZ,XYZ"/>
+							<MonitorTriggerSet ID="202" Objects="152" ShouldDefineCommonRoot="0" IsIndexed="1"/>
+						</DistanceStretcher>
+						<SymmetryTransformer ID="152" Parent="147" Name="MeasurementFragment" NumTriggerSets="1" ShouldMaintainAtCommonRoot="0">
+							<MonitorTriggerSet ID="203" Objects="ci(90):3+177,183,3+187,8+193,16+204,48+5,11+220" EventMask="13"/>
+						</SymmetryTransformer>
+					</IdentityMapping>
+					<ImageMapping ID="231" Element="1,0,0,-2,0,1,0,-2,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="232" Element="1,0,0,-1,0,1,0,-2,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="233" Element="1,0,0,0,0,1,0,-2,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="234" Element="1,0,0,1,0,1,0,-2,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="235" Element="1,0,0,2,0,1,0,-2,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="236" Element="1,0,0,-2,0,1,0,-1,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="237" Element="1,0,0,-1,0,1,0,-1,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="ci(43):14x0,219,21x0,228,3x0,223,0,212" NumImages="4">
+						<Atom3d ID="219" Mapping="237" ImageOf="18" Visible="0"/>
+						<Atom3d ID="228" Mapping="237" ImageOf="40" Visible="0"/>
+						<Atom3d ID="223" Mapping="237" ImageOf="44" Visible="0"/>
+						<Atom3d ID="212" Mapping="237" ImageOf="46" Visible="0"/>
+					</ImageMapping>
+					<ImageMapping ID="238" Element="1,0,0,0,0,1,0,-1,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="ci(106):13x0,183,185,14x0,197,199,4x0,227,3x0,2+221,211,3x0,2+205,18x0,154,5x0,156,27x0,166,5x0,167" NumImages="14">
+						<Atom3d ID="183" Mapping="238" ImageOf="17" Visible="0"/>
+						<Atom3d ID="185" Mapping="238" ImageOf="18" Visible="0"/>
+						<Atom3d ID="197" Mapping="238" ImageOf="33" Visible="0"/>
+						<Atom3d ID="199" Mapping="238" ImageOf="34" Visible="0"/>
+						<Atom3d ID="227" Mapping="238" ImageOf="39" Visible="0"/>
+						<Atom3d ID="221" Mapping="238" ImageOf="43" Visible="0"/>
+						<Atom3d ID="222" Mapping="238" ImageOf="44" Visible="0"/>
+						<Atom3d ID="211" Mapping="238" ImageOf="45" Visible="0"/>
+						<Atom3d ID="205" Mapping="238" ImageOf="49" Visible="0"/>
+						<Atom3d ID="206" Mapping="238" ImageOf="50" Visible="0"/>
+						<Bond ID="154" Mapping="238" ImageOf="70"/>
+						<Bond ID="156" Mapping="238" ImageOf="76"/>
+						<Bond ID="166" Mapping="238" ImageOf="104"/>
+						<Bond ID="167" Mapping="238" ImageOf="110"/>
+					</ImageMapping>
+					<ImageMapping ID="239" Element="1,0,0,1,0,1,0,-1,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="ci(46):45x0,208" NumImages="1">
+						<Atom3d ID="208" Mapping="239" ImageOf="49" Visible="0"/>
+					</ImageMapping>
+					<ImageMapping ID="240" Element="1,0,0,2,0,1,0,-1,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="241" Element="1,0,0,-3,0,1,0,0,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="242" Element="1,0,0,-2,0,1,0,0,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="243" Element="1,0,0,-1,0,1,0,0,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="ci(142):2x0,229,0,177,0,178,0,225,0,218,187,2x0,188,0,215,0,216,0,193,0,194,0,214,3x0,195,0,196,3x0,224,0,226,0,213,0,220,0,210,209,4x0,204,20x0,153,158,8x0,159,3x0,164,20x0,165,2x0,170,29x0,176,3x0,171" NumImages="29">
+						<Atom3d ID="229" Mapping="243" ImageOf="6" Visible="0"/>
+						<Atom3d ID="177" Mapping="243" ImageOf="8" Visible="0"/>
+						<Atom3d ID="178" Mapping="243" ImageOf="10" Visible="0"/>
+						<Atom3d ID="225" Mapping="243" ImageOf="12" Visible="0"/>
+						<Atom3d ID="218" Mapping="243" ImageOf="14" Visible="0"/>
+						<Atom3d ID="187" Mapping="243" ImageOf="15" Visible="0"/>
+						<Atom3d ID="188" Mapping="243" ImageOf="18" Visible="0"/>
+						<Atom3d ID="215" Mapping="243" ImageOf="20" Visible="0"/>
+						<Atom3d ID="216" Mapping="243" ImageOf="22" Visible="0"/>
+						<Atom3d ID="193" Mapping="243" ImageOf="24" Visible="0"/>
+						<Atom3d ID="194" Mapping="243" ImageOf="26" Visible="0"/>
+						<Atom3d ID="214" Mapping="243" ImageOf="28" Visible="0"/>
+						<Atom3d ID="195" Mapping="243" ImageOf="32" Visible="0"/>
+						<Atom3d ID="196" Mapping="243" ImageOf="34" Visible="0"/>
+						<Atom3d ID="224" Mapping="243" ImageOf="38" Visible="0"/>
+						<Atom3d ID="226" Mapping="243" ImageOf="40" Visible="0"/>
+						<Atom3d ID="213" Mapping="243" ImageOf="42" Visible="0"/>
+						<Atom3d ID="220" Mapping="243" ImageOf="44" Visible="0"/>
+						<Atom3d ID="210" Mapping="243" ImageOf="46" Visible="0"/>
+						<Atom3d ID="209" Mapping="243" ImageOf="47" Visible="0"/>
+						<Atom3d ID="204" Mapping="243" ImageOf="52" Visible="0"/>
+						<Bond ID="153" Mapping="243" ImageOf="74"/>
+						<Bond ID="158" Mapping="243" ImageOf="75"/>
+						<Bond ID="159" Mapping="243" ImageOf="84"/>
+						<Bond ID="164" Mapping="243" ImageOf="88"/>
+						<Bond ID="165" Mapping="243" ImageOf="109"/>
+						<Bond ID="170" Mapping="243" ImageOf="112"/>
+						<Bond ID="176" Mapping="243" ImageOf="142"/>
+						<Bond ID="171" Mapping="243" ImageOf="146"/>
+					</ImageMapping>
+					<ImageMapping ID="244" Element="1,0,0,1,0,1,0,0,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="ci(124):0,180,5x0,181,0,184,5x0,186,0,190,5x0,192,0,200,5x0,198,13x0,207,5x0,155,0,157,31x0,160,0,163,28x0,168,0,169,2x0,172,0,174" NumImages="17">
+						<Atom3d ID="180" Mapping="244" ImageOf="5" Visible="0"/>
+						<Atom3d ID="181" Mapping="244" ImageOf="11" Visible="0"/>
+						<Atom3d ID="184" Mapping="244" ImageOf="13" Visible="0"/>
+						<Atom3d ID="186" Mapping="244" ImageOf="19" Visible="0"/>
+						<Atom3d ID="190" Mapping="244" ImageOf="21" Visible="0"/>
+						<Atom3d ID="192" Mapping="244" ImageOf="27" Visible="0"/>
+						<Atom3d ID="200" Mapping="244" ImageOf="29" Visible="0"/>
+						<Atom3d ID="198" Mapping="244" ImageOf="35" Visible="0"/>
+						<Atom3d ID="207" Mapping="244" ImageOf="49" Visible="0"/>
+						<Bond ID="155" Mapping="244" ImageOf="56"/>
+						<Bond ID="157" Mapping="244" ImageOf="58"/>
+						<Bond ID="160" Mapping="244" ImageOf="90"/>
+						<Bond ID="163" Mapping="244" ImageOf="92"/>
+						<Bond ID="168" Mapping="244" ImageOf="121"/>
+						<Bond ID="169" Mapping="244" ImageOf="123"/>
+						<Bond ID="172" Mapping="244" ImageOf="126"/>
+						<Bond ID="174" Mapping="244" ImageOf="128"/>
+					</ImageMapping>
+					<ImageMapping ID="245" Element="1,0,0,2,0,1,0,0,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="246" Element="1,0,0,-3,0,1,0,1,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="247" Element="1,0,0,-2,0,1,0,1,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="248" Element="1,0,0,-1,0,1,0,1,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="ci(21):4x0,230,15x0,217" NumImages="2">
+						<Atom3d ID="230" Mapping="248" ImageOf="8" Visible="0"/>
+						<Atom3d ID="217" Mapping="248" ImageOf="24" Visible="0"/>
+					</ImageMapping>
+					<ImageMapping ID="249" Element="1,0,0,0,0,1,0,1,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="ci(140):3x0,179,182,14x0,189,191,54x0,161,5x0,162,51x0,173,5x0,175" NumImages="8">
+						<Atom3d ID="179" Mapping="249" ImageOf="7" Visible="0"/>
+						<Atom3d ID="182" Mapping="249" ImageOf="8" Visible="0"/>
+						<Atom3d ID="189" Mapping="249" ImageOf="23" Visible="0"/>
+						<Atom3d ID="191" Mapping="249" ImageOf="24" Visible="0"/>
+						<Bond ID="161" Mapping="249" ImageOf="80"/>
+						<Bond ID="162" Mapping="249" ImageOf="86"/>
+						<Bond ID="173" Mapping="249" ImageOf="138"/>
+						<Bond ID="175" Mapping="249" ImageOf="144"/>
+					</ImageMapping>
+					<ImageMapping ID="250" Element="1,0,0,1,0,1,0,1,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="251" Element="1,0,0,2,0,1,0,1,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="252" Element="1,0,0,-2,0,1,0,2,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="253" Element="1,0,0,-1,0,1,0,2,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="254" Element="1,0,0,0,0,1,0,2,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="255" Element="1,0,0,1,0,1,0,2,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="256" Element="1,0,0,-2,0,1,0,3,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="257" Element="1,0,0,-1,0,1,0,3,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="258" Element="1,0,0,0,0,1,0,3,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<ImageMapping ID="259" Element="1,0,0,1,0,1,0,3,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0"/>
+					<MappingRepairs NumRepairs="0"/>
+				</MappingFamily>
+				<InfiniteMapping ID="3" Element="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="2"/>
+			</MappingSet>
+			<OriginalObjects ID="260">
+				<SetCollection Objects="ci(49):49+4"/>
+			</OriginalObjects>
+		</SymmetrySystem>
+	</AtomisticTreeRoot>
+</XSD>

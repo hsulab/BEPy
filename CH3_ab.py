@@ -35,7 +35,7 @@ def get_absite_name_neighfrac(xsdfile_name, absite_name_pattern = '\w_s'):
             ###
             absite_neighbours_ID = atoms_ID_neighbours[absite_ID]
             for atom_ID in absite_neighbours_ID:
-                atom_Name = atoms_ID_Name[atom_ID]
+                atom_Name = atoms_ID_Name.get(atom_ID, 'No such atom!')
                 atom_frac = atoms_Name_frac[atom_Name]
                 absite_neighbours_frac.append(atom_frac)
             print(r'= = = = = = = = = =')
@@ -126,7 +126,7 @@ def ab_move(xsdfile_name, functional_group_pattern, coor_style, distance = 1.0):
         else:
             print(r'= = = = = Failed = = = = =')
             print(r'There is', len(absite_neighbours_frac), \
-              r'connecting with ab atom')
+              r'connecting with absite atom')
         ###
         
     if coor_style == r'sp3':
@@ -136,7 +136,7 @@ def ab_move(xsdfile_name, functional_group_pattern, coor_style, distance = 1.0):
         else:
             print(r'= = = = = Failed = = = = =')
             print(r'There is', len(absite_neighbours_frac), \
-              r'connecting with ab atom')
+              r'connecting with absite atom')
         ###
         
     if coor_style == r'dsp2':
@@ -153,13 +153,13 @@ def ab_move(xsdfile_name, functional_group_pattern, coor_style, distance = 1.0):
         else:
             print(r'= = = = = Failed = = = = =')
             print(r'There is', len(absite_neighbours_frac), \
-              r'connecting with ab atom')
+              r'connecting with absite atom')
         ###
         
 def main():
-    xsdfile_name = r'GeO2+CH3.xsd'
+    xsdfile_name = r'OsO2+CH3_suf110_2x1x4_2fix.xsd'
     #prepare_ab(xsdfile_name, '\w_s')
-    ab_move(xsdfile_name, r'C1H3', r'd2sp3', 1.0)
+    ab_move(xsdfile_name, r'C1H3', r'd2sp3', 2.0)
     #print(lattice_constant(r'./GeO2+H_suf110_2x1x4_2fix.xsd'))
     #calculate_atoms_desc_coordinate(xsdfile_name)
     #print(get_atom_neighbours_frac(xsdfile_name, r'H\S*', '\w_ab'))

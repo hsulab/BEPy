@@ -7,7 +7,7 @@ Created on Fri Dec  8 17:53:09 2017
 ###
 import os
 import pandas as pd
-import calculate_lib as cal
+import geometry as cal
 ###
 def walk_dir_cal_atom_distance(walk_dir_name):
     distance_assemble = []
@@ -16,6 +16,7 @@ def walk_dir_cal_atom_distance(walk_dir_name):
     for i in range(0,len(file_list)):
         file_path = os.path.join(walk_dir_name,file_list[i])
         if os.path.isfile(file_path):
+            print(file_list[i])
             file_information.append(file_list[i])
             file_information.append(cal.calculate_atom_distance(file_path))
             distance_assemble.append(file_information)
