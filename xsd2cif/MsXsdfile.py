@@ -1,8 +1,10 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 Created on Tue Dec 19 17:36:41 2017
 
-@author: Alexander
+@author: Alexande
+
 """
 try: 
     import xml.etree.cElementTree as ET 

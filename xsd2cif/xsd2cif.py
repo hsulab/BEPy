@@ -11,6 +11,7 @@ try:
 except ImportError: 
     import xml.etree.ElementTree as ET
 import numpy as np
+import sys
 ########################################################################
 def atom_info(xsdfile_name, info):
     xsdtree = ET.parse(xsdfile_name)
@@ -79,13 +80,15 @@ def makecif(xsdfile_name):
     for name, component, xyz in zip(atoms_name, atoms_component, atoms_xyz):
         content += '{:<10}{:<10}{:<10}{:<20}{:<20}{:<20}{:<10}\n' \
                 .format(name, component, 1.00000, xyz[0], xyz[1], xyz[2], 0.00000)
-
-    with open('%s.cif' %(xsdfile_name.split('.')[1].strip('/')) , 'w') as f:
-        f.write(content)
     print("Finished")
+    return content
 def main():
-    xsdfile_name = r'./example.xsd'
-    makecif(xsdfile_name)
+    print('script:%s' %(sys.argv[0]))
+    for i in range(1, len(sys.argv)):
+        infile = sys.argv[i]
+        print('{:<5}{:<20}'.format(i, infile))
+        with open('%s.cif' %(infile.split(r'/')[-1].split(r'.')[0]) , 'w') as f:
+            f.write(makecif(infile))
 if __name__ == "__main__":
     main()
 ##
