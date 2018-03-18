@@ -8,15 +8,17 @@
 #########################################################################
 import os
 import re
+import sys
+import shutil
 ###
-path = './dopIrO2/'
+#path = sys.argv[0]
+#os.system('cd %s' %(path))
+path = './dopIrO2'
 for xsdfile in os.listdir(path):
-    print(xsdfile)
-    if re.match(r'/w*.xsd', xsdfile):
-        workdir = '%s/%s' %(path, xsdfile)
+    if re.match(r'\w*.xsd', xsdfile):
+        workdir = '%s/%s/suf' %(path, os.path.splitext(xsdfile)[0])
         print(workdir)
-        os.mkdir(workdir)
-        os.system('cd %s' %(workdir))
-        os.system('cp ../%s ./' %(xsdfile))
-        os.system('pwd')
+        os.makedirs(workdir) 
+        shutil.copy('%s/%s' %(path, xsdfile), '%s/' %(workdir))
+        os.remove('%s/%s' %(path, xsdfile))
 ###

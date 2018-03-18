@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#########################################################################
+# File Name: xsd2pos.py
+# Author: jyxu
+# mail: ahcigar@foxmail.com
+# Created Time: 日  3/18 18:49:10 2018
+#########################################################################
+import sys
+xsdfile = sys.argv[1]
+print('Just a xsd2pos test file on %s!' %(xsdfile))
