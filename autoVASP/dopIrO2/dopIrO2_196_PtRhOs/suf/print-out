@@ -1,0 +1,28 @@
+ running on   24 total cores
+ distrk:  each k-point on   24 cores,    1 groups
+ distr:  one band on    6 cores,    4 groups
+ using from now: INCAR     
+vasp.5.4.1 08Jul2015 (build Apr 24 2014 00:09:29) complex standard with constrain (TS)    
+ POSCAR found type information on POSCAR  O  Rh Os Ir Pt
+ POSCAR found :  5 types and      48 ions
+ scaLAPACK will be used
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.352037672120E+04    0.35204E+04   -0.15539E+05  9128   0.133E+03
+DAV:   2     0.135634050824E+03   -0.33847E+04   -0.30909E+04  9568   0.378E+02
+DAV:   3    -0.361640802858E+03   -0.49727E+03   -0.47289E+03 11024   0.158E+02
+DAV:   4    -0.384370108020E+03   -0.22729E+02   -0.22321E+02 11360   0.367E+01
+DAV:   5    -0.384978235029E+03   -0.60813E+00   -0.60598E+00 11240   0.571E+00    0.133E+02
+RMM:   6    -0.291741040100E+03    0.93237E+02   -0.38071E+02  9142   0.384E+01    0.753E+01
+RMM:   7    -0.454566736020E+03   -0.16283E+03   -0.86776E+01  9200   0.170E+01    0.200E+02
+RMM:   8    -0.338519736308E+03    0.11605E+03   -0.87495E+00  9130   0.740E+00    0.114E+02
+RMM:   9    -0.324659842400E+03    0.13860E+02   -0.29630E+01  9121   0.108E+01    0.746E+01
+RMM:  10    -0.307033143265E+03    0.17627E+02   -0.38542E+01  9127   0.111E+01    0.770E+01
+RMM:  11    -0.285941277123E+03    0.21092E+02   -0.48668E+00  9145   0.498E+00    0.368E+01
+RMM:  12    -0.295226831717E+03   -0.92856E+01   -0.56217E+00  9127   0.468E+00    0.404E+01
+RMM:  13    -0.286483142142E+03    0.87437E+01   -0.37661E+00  9120   0.399E+00    0.187E+01
+RMM:  14    -0.293884771645E+03   -0.74016E+01   -0.19200E+00  9120   0.287E+00    0.213E+01
