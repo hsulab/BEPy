@@ -1,4 +1,4 @@
-SYSTEM = 
+SYSTEM= dopIrO2_1_IrIrRu_ts
 ISYM = 0
 ISTART = 0              ! 0 = new job, 1 = restart
 ISPIN  = 2              ! spin polarisation 1 = no 2 = yes
@@ -22,9 +22,7 @@ NWRITE = 2       ! how much is written out
 LCHARG = .False.! write restart charge file
 LWAVE  = .False.  ! write restart wf file
 
-IBRION= 1        ! 0 MD 1 Brodyn (opt,TS) 2 CG (opt)  3 damped MD(opt) 5  FC 
-POTIM=0.1        ! ion step size/ time step (fs) for MD
-EDIFFG = -0.05  ! convergence criterion for forces
+IBRION= 1
 NSW = 1000        ! max # steps
 ISIF = 2       ! [Stress tensor, 0 = not, 3 = relax latt+ions] p. 60
 
