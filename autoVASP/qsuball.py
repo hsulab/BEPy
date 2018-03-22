@@ -12,6 +12,8 @@ import os
 import sys
 ###
 global qsub_path
+global qsub_dirs
+qsub_dirs = []
 ###
 if len(sys.argv) == 1:
     qsub_path = r'./'
@@ -28,20 +30,31 @@ if os.path.exists(logfile):
 else:
     print('Start!')
 
-def find_dir(string1, string2, path='..'):
-    global qsub_path
+def find_dir(string, path='..'):
+    global qsub_dirs
+    path = os.path.abspath(path)
+    vaspfiles = ['INCAR','POSCAR','POTCAR','KPOINTS','vasp.script']
     #print('cur dir:%s' % os.path.abspath(path))
-    if string1 in os.listdir(os.path.abspath(path)):
-        if string2 in os.listdir(os.path.abspath(path)):
-            os.system(r'echo %s Already qsub vasp.script! >> %s' %(os.path.abspath(path), logfile))
+    if set(vaspfiles) & set(os.listdir(path)) == set(vaspfiles):
+        if string in os.listdir(path):
+            os.system(r'echo %s Already qsub vasp.script! >> %s' %(path, logfile))
         else:
-            os.chdir(os.path.abspath(path))
-            os.system(r'qsub vasp.script >> %s' %(logfile))
-            os.system(r'echo %s >> %s' %(os.path.abspath(path), logfile))
-            os.chdir(os.path.abspath(qsub_path))
-    for filename in os.listdir(os.path.abspath(path)):
-        deeper_dir = os.path.join(os.path.abspath(path), filename)
+            qsub_dirs.append(path)
+    ###
+    for filename in os.listdir(path):
+        deeper_dir = os.path.join(path, filename)
         if os.path.isdir(deeper_dir):
-            find_dir(string1, string2, deeper_dir)
+            find_dir(string, deeper_dir)
 ###
-find_dir('vasp.script', 'print-out', qsub_path)
+def qsub_all(number):
+    if len(qsub_dirs) >= number:
+        for i in range(number):
+            path = qsub_dirs[i]
+            os.chdir(path)
+            os.system('echo "%s     \c" >> %s' %(path, logfile))
+            os.system(r'qsub vasp.script >> %s' %(logfile))
+            os.chdir(qsub_path)
+    else:
+        qsub_all(len(qsub_dirs))
+find_dir('print-out', qsub_path)
+qsub_all(10)

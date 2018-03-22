@@ -8,6 +8,7 @@
 #########################################################################
 import os
 import shutil
+import sys
 from autoSet import set_INCAR
 ###
 ###
@@ -138,5 +139,12 @@ def prepare_ts(finished_dirs):
 
 ###
 ##
-finished_dirs = check_printout(pre_dirs('./dopIrO2'))
+work_dir = []
+if len(sys.argv) == 1:
+    work_dir = r'./dopIrO2'
+elif len(sys.argv) == 2:
+    work_dir = sys.argv[1]
+    if not os.path.isdir(work_dir):
+        sys.exit()
+finished_dirs = check_printout(pre_dirs(work_dir))
 prepare_ts(finished_dirs)
