@@ -1,10 +1,10 @@
 #!/bin/bash 
-#PBS -N dopIrO2_141_PdPtPd
+#PBS -N dopIrO2_114_PdRuIr_ts
 #PBS -r n 
 #PBS -j oe 
 #PBS -l walltime=3:00:00:00
 #PBS -l nodes=2:ppn=12
-#PBS -q normal
+#PBS -q bigmem
 
 source /data/intel2015.3.sh
 # go to work dir

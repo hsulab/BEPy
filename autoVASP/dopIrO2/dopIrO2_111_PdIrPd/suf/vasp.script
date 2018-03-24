@@ -4,7 +4,7 @@
 #PBS -j oe 
 #PBS -l walltime=3:00:00:00
 #PBS -l nodes=2:ppn=12
-#PBS -q bigmem
+#PBS -q normal
 
 source /data/intel2015.3.sh
 # go to work dir

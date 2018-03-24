@@ -10,6 +10,7 @@ import os
 import shutil
 import sys
 from autoSet import set_INCAR
+from autoSet import set_VASPsp
 ###
 ###
 def pre_dirs(work_dir):
@@ -47,12 +48,18 @@ def check_printout(cal_dirs):
             os.system(r'echo There is no print-out in %s >> %s' %(check_dir, result_path))
     return finished_dirs
 ###
+def create_VASPsp(dir, suf_dir, ts_dir):
+    suf_VASPsp = os.path.join(suf_dir, 'vasp.script')
+    ts_VASPsp = os.path.join(ts_dir, 'vasp.script')
+    shutil.copyfile(suf_VASPsp, ts_VASPsp)
+    set_VASPsp(ts_VASPsp, '#PBS -N', os.path.basename(dir) + '_ts', 1)
+###
 def create_INCAR(dir, suf_dir, ts_dir):
     suf_INCAR = os.path.join(suf_dir, 'INCAR')
     ts_INCAR = os.path.join(ts_dir, 'INCAR')
     shutil.copyfile(suf_INCAR, ts_INCAR)
-    set_INCAR(ts_INCAR, 'SYSTEM', os.path.basename(dir) + '_ts')
-    set_INCAR(ts_INCAR, 'IBRION', '1')
+    set_INCAR(ts_INCAR, 'SYSTEM', os.path.basename(dir) + '_ts', 1)
+    set_INCAR(ts_INCAR, 'IBRION', '1', 1)
 ###
 def create_POSCAR(dir, suf_dir, ts_dir):
     content = []
@@ -66,11 +73,11 @@ def create_POSCAR(dir, suf_dir, ts_dir):
     new_content += '{:>5}{:>5}'.format('4', '1') + str(content[6])
     for line in content[7:9]:
         new_content += line
-    new_content += '0.573521486444    0.332890746494    0.542347538452    T   T   T\n \
-                    0.583968473201    0.643085208862    0.567518468967    T   T   T\n \
-                    0.723722447115    0.386856169075    0.609219236308    T   T   T\n \
-                    0.442815428287    0.383751349500    0.612745621226    T   T   T\n \
-                    0.578859020373    0.423707074865    0.584519962387    T   T   T\n'
+    new_content += '  0.573521486444      0.332890746494      0.542347538452       T   T   T\n\
+  0.583968473201      0.643085208862      0.567518468967       T   T   T\n\
+  0.723722447115      0.386856169075      0.609219236308       T   T   T\n\
+  0.442815428287      0.383751349500      0.612745621226       T   T   T\n\
+  0.578859020373      0.423707074865      0.584519962387       T   T   T\n'
     for line in content[9:58]:
         new_content += line
     with open(os.path.join(ts_dir, 'POSCAR'), 'w') as f:
@@ -123,6 +130,7 @@ def prepare_ts(finished_dirs):
                 shutil.rmtree(ts_dir)
                 os.system(r'echo %s rming and making ts >> %s' %(ts_dir, result_path))
                 os.mkdir(ts_dir)
+                create_VASPsp(dir, suf_dir, ts_dir)
                 create_INCAR(dir, suf_dir, ts_dir)
                 shutil.copyfile(os.path.join(suf_dir, 'KPOINTS'), os.path.join(ts_dir, 'KPOINTS'))
                 create_POSCAR(dir, suf_dir, ts_dir)

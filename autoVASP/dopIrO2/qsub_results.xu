@@ -1,0 +1,22 @@
+/Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_145_OsIrRu/suf Lack {POSCAR, vasp.script, KPOINTS, INCAR, POTCAR}!
+/Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_1_IrIrRu/suf Already qsub vasp.script!
+/Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_1_IrIrRu/ts Lack {vasp.script}!
+/Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_114_PdRuIr/suf Already qsub vasp.script!
+/Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_114_PdRuIr/ts Lack {vasp.script}!
+/Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_142_PdPtOs/suf Already qsub vasp.script!
+/Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_142_PdPtOs/ts Lack {vasp.script}!
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_147_OsIrPd/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_143_PdPtPt/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_148_OsIrOs/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_118_PdRuOs/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_14_IrRhRh/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_113_PdIrPt/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_115_PdRuRu/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_140_PdPtRh/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_11_IrRuPt/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_149_OsIrPt/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_141_PdPtPd/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_112_PdIrOs/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_116_PdRuRh/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_144_OsIrIr/suf     29000.master
+-e /Users/jyxu/Documents/USRP/BEPy/autoVASP/dopIrO2/dopIrO2_111_PdIrPd/suf     29000.master
